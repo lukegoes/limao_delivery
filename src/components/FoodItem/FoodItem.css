@@ -86,8 +86,3 @@
     cursor: pointer;
 }
 
-@media (max-width: 750px) {
-    .food-item{
-        max-width: 570px;
-    }
-}

@@ -64,6 +64,11 @@ columns: #808080;
         font-size: 15px;
     }
 
+    .explore-menu-list img{
+        width: 13vw;
+        min-width: 80px;
+    }
+
 }
 
 @media (max-width: 750px) {

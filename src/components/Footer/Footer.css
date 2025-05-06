@@ -61,7 +61,7 @@
     font-size: 12px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1080px) {
 
     .footer{
         gap: 12px;

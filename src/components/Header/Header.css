@@ -49,16 +49,12 @@
 @media (max-width: 1050px) {
 
     .header-contents{
-        max-width: 45%;
-    }
-
-}
-
-@media (max-width: 750px) {
-
-    .header-contents{
         max-width: 65%;
         animation: none;
+        gap: 1vw;
+        max-width: 50%;
+        bottom: 15%;
+        left: 3vw;
     }
 
     .header-contents p{
@@ -73,9 +69,9 @@
 
     .header{
         height: 32vw;
-        width: 750px;
+        width: 100%;
         margin: 30px auto;
-        max-width: 750px;
+        max-width: 800px;
     }
 
 }
