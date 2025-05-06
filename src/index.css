@@ -1,5 +1,3 @@
-
-
 *{
   padding: 0;
   margin: 0;
@@ -16,10 +14,6 @@ a{
   color: inherit;
 }
 
-.app{
-  width: 80%;
-  margin: auto;
-}
 
 @keyframes fadeIn{
   0%{
@@ -28,4 +22,21 @@ a{
   100%{
     opacity: 1;
   }	
+}
+
+@media (max-width: 750px) {
+  .app{
+    padding: 0px 25px;
+  }
+
+  .root{
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 750px) {
+  .app{
+    width: 80%;
+    margin: auto;
+  }
 }

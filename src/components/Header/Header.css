@@ -6,8 +6,6 @@
     position: relative;
 }
 
-
-
 .header-contents{
     position: absolute;
     display: flex;
@@ -60,6 +58,7 @@
 
     .header-contents{
         max-width: 65%;
+        animation: none;
     }
 
     .header-contents p{
@@ -67,7 +66,16 @@
     }
 
     .header-contents button{
-        padding: 2vw 4vw;
+        padding: 1.5vw 2.5vw;
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    .header{
+        height: 32vw;
+        width: 750px;
+        margin: 30px auto;
+        max-width: 750px;
     }
 
 }
