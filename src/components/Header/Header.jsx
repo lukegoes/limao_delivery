@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='header'>
     <div className="header-contents">
-    <h2>Comida boa, Entrega rápida!</h2>
+    <h2>Comida boa, <br/> Entrega rápida!</h2>
     <p>Descubra sabores incríveis com nosso cardápio variado, preparado por chefs que entendem do assunto.</p>
     <button>Explorar o Cardápio</button>
     </div>

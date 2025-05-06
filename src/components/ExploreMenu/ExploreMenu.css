@@ -56,3 +56,12 @@ columns: #808080;
 .explore-menu-list-item .active{
     box-shadow: 0 0 0 4px #ff6347;
 }
+
+@media (max-width: 1050px) {
+
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+}
