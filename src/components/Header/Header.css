@@ -52,6 +52,7 @@
     .header {
         height: 250px;
         padding: 0 20px;
+        max-width: 100%;
     }
 
     .header-contents {
@@ -78,9 +79,9 @@
 @media (max-width: 480px){
     .header{
         height: 200px;
-        width: 500px;
         margin: 10px auto;
         border-radius: 0;
+        max-width: 100%;
     }
     
 
