@@ -89,15 +89,10 @@
 @media (max-width: 768px) {
     .food-item-name-rating p {
         font-size: 18px;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
-        height: 1.2em;
     }
 
     .food-item-desc {
-        font-size: 11px;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
+        display: none;
     }
 
     .food-item-info {
