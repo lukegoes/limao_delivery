@@ -58,40 +58,30 @@
     right: -8px;
 }
 
-@media (max-width: 1050px) {
-
-    .navbar{
-        padding: 20px 30px;
-        align-items: center;
-        display: flex;
-    }
-
-    .navbar .logo{
-        width: 200px;
-    }
-
+@media (max-width: 480px) {
     .navbar-menu{
         display: none;
     }
 
+    .navbar .logo{
+        width: 120px;
+        padding-left: 10px;
+    }
+
     .navbar-direita{
-        gap: 30px;
+        gap: 25px;
     }
-
+    
     .navbar-direita img{
-        width: 30px;
-        
+        width: 25px;
     }
 
-    .navbar-bar button{
-       padding: 8px 25px;
-       font-size: 16px;
-       color: #49557e;
-       border: 1px solid #ffad00;
-       padding: 10px 30px;
-       border-radius: px;
-       cursor: pointer;
-       transition: 0.3s;
+    .navbar button{
+        font-size: 16px;
+        border: 1px solid #ffad00;
+        padding: 10px 10px;
+        border-radius: 50px;
     }
-}
 
+
+  }
