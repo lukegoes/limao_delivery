@@ -117,7 +117,7 @@ export const menu_list = [
 export const food_list = [
     {
         _id: "1",
-        name: "Salada Romana",
+        name: "Salada Limão Fresh",
         image: food_1,
         price: 12.99,
         description: "Uma mistura leve com tomates, pepino, queijo e azeitonas.",
@@ -125,42 +125,42 @@ export const food_list = [
     },
     {
         _id: "2",
-        name: "Salada Vegana",
+        name: "Salada Cítrica",
         image: food_2,
         price: 18.99,
         description: "Folhas frescas com grão-de-bico, cenoura e molho cítrico.",
         category: "Saladas"
     }, {
         _id: "3",
-        name: "Salada Francesa",
+        name: "Salada Mix Zest",
         image: food_3,
         price: 16.99,
         description: "Mix refinado com batatas, ervas e molho especial.",
         category: "Saladas"
     }, {
         _id: "4",
-        name: "Salada de Frango",
+        name: "Salada Garden",
         image: food_4,
         price: 24.99,
         description: "Peito de frango grelhado com folhas verdes e croutons.",
         category: "Saladas"
     }, {
         _id: "5",
-        name: "Rolinho de Lasanha",
+        name: "Rolinho Citrus",
         image: food_5,
         price: 14.99,
         description: "Massa recheada com carne e queijo ao estilo italiano.",
         category: "Rolinhos"
     }, {
         _id: "6",
-        name: "Rolinho Peri Peri",
+        name: "Chicken Extra Sour",
         image: food_6,
         price: 12.99,
         description: "Recheio picante com frango e molho peri peri.",
         category: "Rolinhos"
     }, {
         _id: "7",
-        name: "Rolinho de Frango",
+        name: "Chicken Citrus",
         image: food_7,
         price: 20.99,
         description: "Rolinho recheado com frango desfiado e especiarias.",
@@ -174,28 +174,28 @@ export const food_list = [
         category: "Rolinhos"
     }, {
         _id: "9",
-        name: "Sorvete de Framboesa",
+        name: "Tiramissu Sour",
         image: food_9,
         price: 14.99,
         description: "Sorvete leve de framboesa com toque natural.",
         category: "Sobremesas"
     }, {
         _id: "10",
-        name: "Sorvete de Frutas",
+        name: "Cheesecake de Limão",
         image: food_10,
         price: 22.99,
         description: "Combinação refrescante de frutas da estação.",
         category: "Sobremesas"
     }, {
         _id: "11",
-        name: "Pote dos Desejos",
+        name: "Torta de Limão",
         image: food_11,
         price: 10.99,
         description: "Delícia cremosa com camadas de chocolate e frutas.",
         category: "Sobremesas"
     }, {
         _id: "12",
-        name: "Sorvete de Baunilha",
+        name: "Picolé Mix Citrus",
         image: food_12,
         price: 12.99,
         description: "Clássico sorvete de baunilha artesanal.",
@@ -232,28 +232,28 @@ export const food_list = [
         category: "Sanduíches"
     }, {
         _id: "17",
-        name: "Cupcake de Morango",
+        name: "Bolo de Limão",
         image: food_17,
         price: 14.99,
         description: "Cupcake macio com cobertura de morango.",
         category: "Bolos"
     }, {
         _id: "18",
-        name: "Bolo Vegano",
+        name: "Bolo de Morango",
         image: food_18,
         price: 12.99,
         description: "Bolo leve com ingredientes 100% veganos.",
         category: "Bolos"
     }, {
         _id: "19",
-        name: "Bolo Escoces",
+        name: "Bolo de Blueberry",
         image: food_19,
         price: 20.99,
         description: "Bolo amanteigado com sabor marcante e delicado.",
         category: "Bolos"
     }, {
         _id: "20",
-        name: "Cheesecake de Caramelo",
+        name: "Cheesecake Caramel",
         image: food_20,
         price: 15.99,
         description: "Cheesecake suave com calda de caramelo salgado.",
