@@ -46,32 +46,3 @@
     color: white;
 }
 
-@media (max-width: 1050px) {
-
-    .header-contents{
-        max-width: 65%;
-        animation: none;
-        gap: 1vw;
-        max-width: 50%;
-        bottom: 15%;
-        left: 3vw;
-    }
-
-    .header-contents p{
-        display: none;
-    }
-
-    .header-contents button{
-        padding: 1.5vw 2.5vw;
-        font-weight: 800;
-        font-size: 16px;
-    }
-
-    .header{
-        height: 32vw;
-        width: 100%;
-        margin: 30px auto;
-        max-width: 800px;
-    }
-
-}
