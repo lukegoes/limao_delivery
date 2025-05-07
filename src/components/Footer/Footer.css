@@ -61,3 +61,38 @@
     font-size: 12px;
 }
 
+@media (max-width: 480px) {
+    .footer-content{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer{
+        padding: 20px 5vw;
+        padding-top: 40px;
+        margin-top: 80px;
+    }
+
+    .footer-content-centro{
+        display: none;
+    }
+
+    .footer-content-direita{
+        display: none;
+    }
+
+    .footer-content-esquerda p{
+        font-size: 14px;
+    }
+
+    .footer-content-esquerda{
+        gap: 10px;
+    }
+
+    .footer-content-esquerda .footer-logo{
+        width: 180px;
+        margin-right: 0px;
+    }
+}

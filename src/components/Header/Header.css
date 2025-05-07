@@ -1,8 +1,9 @@
 .header{
-    height: 34vw;
+    height: 400px;
+    width: 1200px;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: relative;
 }
 
@@ -46,3 +47,24 @@
     color: white;
 }
 
+@media (max-width: 480px){
+    .header{
+        height: 200px;
+        width: 350px;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+    
+
+    .header-contents p{
+        display: none;
+    }
+
+    .header-contents h2{
+        font-size: 20px;
+    }
+
+    .header-contents button{
+        font-size: 10px;
+    }
+}

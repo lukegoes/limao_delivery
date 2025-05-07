@@ -5,6 +5,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.app{
+  padding: 0px 40px 0px 40px;
+}
 
 body{
   min-height: 100vh;
@@ -23,4 +26,10 @@ a{
   100%{
     opacity: 1;
   }	
+}
+
+@media (max-width: 480px) {
+  .app{
+    padding: 0px 20px 0px 20px;
+  }
 }

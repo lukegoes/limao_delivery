@@ -2,6 +2,7 @@
 display: flex;
 flex-direction: column;
 gap: 20px;
+padding: 0 50px;
 }
 
 .explore-menu h1{
@@ -55,4 +56,30 @@ columns: #808080;
 
 .explore-menu-list-item .active{
     box-shadow: 0 0 0 4px #ff6347;
+}
+
+@media (max-width: 480px) {
+
+    .explore-menu{
+        gap: 5px;
+        padding: 5px 20px 0px;
+        }
+
+    .explore-menu h1{
+        font-size: 20px;
+    }
+
+    .explore-menu-text{
+        display: none;
+        }
+
+    .explore-menu hr{
+        margin: 3px 0;
+        height: 2px;
+    }    
+
+    .explore-menu-list{
+        gap: 15px;
+        margin: 5px 0;
+    }
 }
