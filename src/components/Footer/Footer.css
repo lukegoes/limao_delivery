@@ -127,8 +127,12 @@
         gap: 10px;
     }
 
+    .footer-social-icons{
+        margin-left: 15px;
+    }
+
     .footer-content-esquerda .footer-logo{
-        width: 180px;
-        margin-right: 0px;
+        width: 100px;
+        margin-left: 28px;
     }
 }
