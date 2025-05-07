@@ -61,7 +61,43 @@
     font-size: 12px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer {
+        padding: 20px 6vw;
+        margin-top: 90px;
+    }
+
+    .footer-content-esquerda p {
+        font-size: 13px;
+    }
+
+    .footer-content-direita h2,
+    .footer-content-centro h2 {
+        font-size: 18px;
+    }
+
+    .footer-content-esquerda .footer-logo {
+        width: 200px;
+    }
+
+    .footer-social-icons img {
+        width: 32px;
+        margin-right: 12px;
+    }
+
+    .footer-content-esquerda,
+    .footer-content-direita,
+    .footer-content-centro {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 550px) {
     .footer-content{
         grid-template-columns: 1fr;
         display: flex;

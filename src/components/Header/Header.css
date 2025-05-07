@@ -1,6 +1,7 @@
 .header{
     height: 400px;
     width: 100%;
+    max-width: 1200px;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
     background-size: cover;
@@ -46,6 +47,33 @@
     background-color: #11BB25;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .header {
+        height: 250px;
+        padding: 0 20px;
+    }
+
+    .header-contents {
+        max-width: 100%;
+        left: 5%;
+        gap: 10px;
+    }
+
+    .header-contents h2 {
+        font-size: 24px;
+    }
+
+    .header-contents p {
+        font-size: 12px;
+    }
+
+    .header-contents button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
 
 @media (max-width: 480px){
     .header{

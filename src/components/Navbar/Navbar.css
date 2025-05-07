@@ -72,7 +72,41 @@
     right: -4px;
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-menu {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .navbar .logo {
+        width: 90px;
+    }
+
+    .navbar-direita {
+        gap: 20px;
+    }
+
+    .navbar-direita img {
+        width: 24px;
+    }
+
+    .navbar-search-icon img {
+        width: 26px;
+    }
+
+    .navbar button {
+        font-size: 13px;
+        padding: 6px 18px;
+    }
+}
+
+
+@media (max-width: 550px) {
 
     .navbar {
         justify-content: space-between; /* afasta mais os elementos */

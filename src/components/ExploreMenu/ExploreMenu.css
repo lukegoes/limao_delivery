@@ -58,6 +58,36 @@ columns: #808080;
     box-shadow: 0 0 0 4px #ff6347;
 }
 
+@media (max-width: 768px) {
+    .explore-menu {
+        gap: 10px;
+        padding: 0 30px;
+    }
+
+    .explore-menu h1 {
+        font-size: 24px;
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .explore-menu-list {
+        gap: 20px;
+    }
+
+    .explore-menu-list img {
+        width: 10vw;
+        min-width: 70px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 480px) {
 
     .explore-menu{

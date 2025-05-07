@@ -16,7 +16,24 @@
     row-gap: 50px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .food-display {
+        padding: 0 35px;
+    }
+
+    .food-display h2 {
+        font-size: 22px;
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 25px;
+        row-gap: 40px;
+    }
+}
+
+
+@media (max-width: 550px) {
 
     .food-display h2{
         font-size: 20px;
