@@ -4,12 +4,13 @@ import { StoreContext } from '../../context/StoreContext'
 
 const Carrinho = () => {
 
-  const{cartItems, food_list, removeTotalFromCart} = useContext(StoreContext);
+  const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount} = useContext(StoreContext);
 
   const isCartEmpty = food_list.every(item => cartItems[item._id] === 0 || !cartItems[item._id]);
 
   return (
     <div className='carrinho'>
+      <h2 className='carrinho-titulo'>Carrinho</h2>
       <div className="items-carrinho">
         <div className="items-carrinho-titulo">
           <p>Items</p>
@@ -48,6 +49,37 @@ const Carrinho = () => {
         )}
       </div>
       <hr />
+      <div className="cart-bottom">
+        <div className="cart-total">
+          <h2>Total do Carrinho</h2>
+          <div>
+            <div className="cart-total-details">
+              <p>Subtotal</p>
+              <p>R${getTotalCartAmount()}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Taxa de entrega</p>
+              <p>R${9.99}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <b>Total</b>
+              <b>R${(getTotalCartAmount() + 9.99).toFixed(2)}</b>
+            </div>   
+          </div>
+          <button>Finalizar Compra</button>
+        </div>
+        <div className="cart-promocode">
+        <div>
+          <p>Tem um código promocional? Digite aqui!</p>
+          <div className='cart-promocode-input'>
+            <input type="text" placeholder='Código promocional'/>
+            <button>Aplicar</button>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
   )
 }
