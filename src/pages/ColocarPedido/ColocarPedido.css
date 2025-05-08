@@ -1,0 +1,79 @@
+.colocar-pedido{
+    margin-top: 40px;
+    padding: 0 100px;
+    min-height: 70vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.colocar-pedido-esquerda{
+    width: 100%;
+    max-width: 500px;
+}
+
+.colocar-pedido-esquerda .title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.colocar-pedido-esquerda input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: #11BB25;
+}
+
+.colocar-pedido-esquerda .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.colocar-pedido-direita{
+    width: 100%;
+    max-width: 500px;
+}
+
+.colocar-pedido-direita .title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.colocar-pedido-direita .cart-total button{
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .colocar-pedido{
+        margin-top: 50px;
+        padding: 0 60px;
+        gap: 50px;
+        min-height: 48vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .colocar-pedido{
+        margin-top: 25px;
+        padding: 0 20px;
+        gap: 50px;
+        min-height: 66vh;
+    }
+
+    .colocar-pedido-esquerda .title{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .colocar-pedido-direita .title{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}

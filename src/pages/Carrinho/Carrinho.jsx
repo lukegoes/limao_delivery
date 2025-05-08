@@ -1,8 +1,11 @@
 import React, { useContext } from 'react'
 import './Carrinho.css'
 import { StoreContext } from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom'
 
 const Carrinho = () => {
+
+  const navigate = useNavigate();
 
   const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount} = useContext(StoreContext);
 
@@ -60,22 +63,22 @@ const Carrinho = () => {
             <hr />
             <div className="cart-total-details">
               <p>Taxa de entrega</p>
-              <p>R${9.99}</p>
+              <p>R${getTotalCartAmount()===0?0:9.99}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>R${(getTotalCartAmount() + 9.99).toFixed(2)}</b>
+              <b>R${(getTotalCartAmount()===0?0:getTotalCartAmount() + 9.99).toFixed(2)}</b>
             </div>   
           </div>
-          <button>Finalizar Compra</button>
+          <button onClick={() => navigate("/pedido")}>FINALIZAR COMPRA</button>
         </div>
         <div className="cart-promocode">
         <div>
           <p>Tem um código promocional?</p>
           <div className='cart-promocode-input'>
             <input type="text" placeholder='Código promocional'/>
-            <button>Aplicar</button>
+            <button>APLICAR</button>
           </div>
         </div>
       </div>

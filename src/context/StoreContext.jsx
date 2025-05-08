@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import { food_list } from "../assets/frontend_assets/assets";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
