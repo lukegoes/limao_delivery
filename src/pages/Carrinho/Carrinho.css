@@ -62,17 +62,19 @@
 @media (max-width: 550px) {
     .carrinho{
         margin-top: 25px;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .items-carrinho-titulo{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .items-carrinho-item{
-        margin: 8px 0;
+        margin: 6px 0;
         display: grid;
         grid-template-columns: 0.8fr 1fr 0.5fr 0.8fr 0.5fr;
+        word-break: break-word;
+        white-space: normal;
     }
     
     .items-carrinho-item img{
