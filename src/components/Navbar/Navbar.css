@@ -109,7 +109,7 @@
 @media (max-width: 550px) {
 
     .navbar {
-        justify-content: space-between; /* afasta mais os elementos */
+        justify-content: space-between;
         padding: 10px 15px 5px;
     }
 
