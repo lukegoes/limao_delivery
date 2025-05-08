@@ -13,7 +13,7 @@ const Carrinho = () => {
       <div className="items-carrinho">
         <div className="items-carrinho-titulo">
           <p>Items</p>
-          <p>Produto</p>
+          <p >Produto</p>
           <p className='preco'>Preço</p>
           <p>Qtd</p>
           <p>Total</p>
@@ -33,7 +33,7 @@ const Carrinho = () => {
                 <div key={item._id}>
                   <div className='items-carrinho-item'>
                     <img src={item.image} alt="" />
-                    <p>{item.name}</p>
+                    <p className='nome-produto'>{item.name}</p>
                     <p className='preco'>R${item.price}</p>
                     <p>{cartItems[item._id]}</p>
                     <p>R${item.price * cartItems[item._id]}</p>

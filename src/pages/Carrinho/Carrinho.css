@@ -66,19 +66,18 @@
     }
 
     .items-carrinho-titulo{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .items-carrinho-item{
-        margin: 6px 0;
+        margin: 10px 0;
         display: grid;
         grid-template-columns: 0.8fr 1fr 0.5fr 0.8fr 0.5fr;
-        word-break: break-word;
-        white-space: normal;
+        justify-content: start;
     }
     
     .items-carrinho-item img{
-        width: 60px;
+        width: 40px;
     }
 
     .items-carrinho-titulo{
@@ -97,5 +96,18 @@
         text-align: center;
         margin: 50px auto;
         padding: 10px 10px;
+    }
+
+    .nome-produto {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        font-size: 12px;
+        max-width: 80px;
+        padding-right: 10px;
+      }
+
+      .items-carrinho-item .cross{
+        padding-left: 10px;
     }
 }
