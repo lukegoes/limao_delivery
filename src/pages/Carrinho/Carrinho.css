@@ -136,6 +136,7 @@
     
     .cart-bottom{
         flex-direction: column-reverse;
+        margin-top: 40px;
     }
 
     .cart-promocode{
