@@ -99,9 +99,6 @@
     }
 
     .nome-produto {
-        white-space: normal;
-        word-break: break-word;
-        overflow-wrap: break-word;
         font-size: 12px;
         max-width: 80px;
         padding-right: 10px;
