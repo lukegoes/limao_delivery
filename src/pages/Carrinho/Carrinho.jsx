@@ -72,7 +72,7 @@ const Carrinho = () => {
         </div>
         <div className="cart-promocode">
         <div>
-          <p>Tem um código promocional? Digite aqui!</p>
+          <p>Tem um código promocional?</p>
           <div className='cart-promocode-input'>
             <input type="text" placeholder='Código promocional'/>
             <button>Aplicar</button>

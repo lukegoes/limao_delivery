@@ -36,7 +36,7 @@ const Footer = () => {
     
     </div>
     <hr />
-    <p className="footer-copyright">Copyright 2025 © Limão.com - Todos os direitos reservados</p>
+    <p className="footer-copyright">Copyright 2025 © Limão.com</p>
   </div>;
 };
 

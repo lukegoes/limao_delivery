@@ -29,6 +29,8 @@
 }
 
 .footer-content-esquerda .footer-logo{
+    max-width: 200px;
+    width: 100%;
     margin-right: 50px;
 }
 
@@ -47,6 +49,10 @@
 .footer-social-icons img{
     width: 40px;
     margin-right: 20px;
+}
+
+.footer-social-icons img:last-child{
+    margin-right: 0px;
 }
 
 .footer hr{
@@ -82,18 +88,24 @@
     }
 
     .footer-content-esquerda .footer-logo {
-        width: 200px;
+        width: 80%;
     }
 
     .footer-social-icons img {
         width: 32px;
-        margin-right: 12px;
     }
 
     .footer-content-esquerda,
     .footer-content-direita,
     .footer-content-centro {
         gap: 15px;
+        display: flex;
+        flex-direction: center;
+        align-items: center;
+    }
+
+    .footer-content-esquerda .footer-logo{
+        margin-right: 0px;
     }
 }
 
@@ -127,12 +139,9 @@
         gap: 10px;
     }
 
-    .footer-social-icons{
-        margin-left: 15px;
-    }
 
     .footer-content-esquerda .footer-logo{
         width: 100px;
-        margin-left: 28px;
+        align-self: center;
     }
 }
