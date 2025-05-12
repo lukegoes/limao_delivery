@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <div>
-      <ToastContainer/>
+      <ToastContainer autoClose={2000} />
       <Navbar/>
       <hr/>
       <div className="app-content">
