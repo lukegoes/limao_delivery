@@ -114,10 +114,10 @@
     width: 20px;
 }
 
-.navbar-profile img{
-    width: 22px;
+.navbar-profile .profile-img{
+    width: 35px;
     cursor: pointer;
-    padding: 4px 0px 0px;
+    padding: 4px 0px;
 }
 
 .nav-profile-dropdown li:hover{
@@ -159,6 +159,16 @@
 
 @media (max-width: 550px) {
 
+    .navbar-profile img{
+        width: 50px;
+    }
+
+    .navbar-profile .profile-img{
+    width: 26px;
+    cursor: pointer;
+    padding: 4px 0px 0px 0px;
+}
+    
     .navbar {
         justify-content: space-between;
         padding: 10px 15px 5px;
