@@ -9,7 +9,7 @@ import dotenv from "dotenv";
 //App Config
 
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000;
 dotenv.config();
 
 //Middlewares
@@ -30,9 +30,9 @@ app.get("/", (req, res)=>{
     res.send("API Funcionando")
 })
 
-app.listen(port, ()=>{
-    console.log(`Server iniciado em http://localhost:${port}`)
-})
+app.listen(port, () => {
+  console.log(`Server iniciado na porta ${port}`);
+});
 
 
 
