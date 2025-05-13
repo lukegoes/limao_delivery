@@ -12,9 +12,7 @@ const FoodDisplay = ({category}) => {
     <div className='food-display' id='food-display'>
     <h2>Os Mais Pedidos</h2>
     <div className="food-display-list">
-    {food_list.map((item, index)=>{
-        console.log('Categoria selecionada:', category);
-        console.log('Categoria do item:', item.category);        
+    {food_list.map((item, index)=>{       
         if (category==="All" || category === item.category) {
             return (<FoodItem
             key={index}

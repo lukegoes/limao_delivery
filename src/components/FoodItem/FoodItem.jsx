@@ -4,7 +4,7 @@ import { assets } from "../../assets/frontend_assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
         <div className="food-item-img-wrapper">
           {!loaded && <div className="img-skeleton" />}
           <img
-            src={image}
+            src={url+"/images/"+image}
             alt=""
             className="food-item-img"
             style={{ display: loaded ? "block" : "none" }}

@@ -7,7 +7,7 @@ const Carrinho = () => {
 
   const navigate = useNavigate();
 
-  const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount} = useContext(StoreContext);
+  const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount, url} = useContext(StoreContext);
 
   const isCartEmpty = food_list.every(item => cartItems[item._id] === 0 || !cartItems[item._id]);
 
@@ -36,12 +36,12 @@ const Carrinho = () => {
               return (
                 <div key={item._id}>
                   <div className='items-carrinho-item'>
-                    <img src={item.image} alt="" />
+                    <img src={url+"/images/"+item.image} alt="" />
                     <p className='nome-produto'>{item.name}</p>
                     <p className='preco'>R${item.price}</p>
                     <p>{cartItems[item._id]}</p>
                     <p>R${item.price * cartItems[item._id]}</p>
-                    <p onClick={() => removeTotalFromCart(item._id)} className='cross'>x</p>
+                    <p onClick={() => removeTotalFromCart(item._id)} className='cross'>X</p>
                   </div>
                   <hr />
                 </div>
