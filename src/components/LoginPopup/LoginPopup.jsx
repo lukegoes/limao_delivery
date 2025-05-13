@@ -7,7 +7,8 @@ import axios from 'axios';
 
 const LoginPopup = ({setShowLogin}) => {
 
-    const {url, setToken} = useContext(StoreContext)
+    const {setToken} = useContext(StoreContext)
+    const url = import.meta.env.VITE_API_URL;
 
     const [currState, setcurrState] = useState("Login");
     const [data, setData] = useState({
