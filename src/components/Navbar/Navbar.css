@@ -114,6 +114,12 @@
     width: 20px;
 }
 
+.navbar-profile img{
+    width: 24px;
+    cursor: pointer;
+    padding: 4px 0px 0px;
+}
+
 .nav-profile-dropdown li:hover{
     color: #11BB25;
 }
