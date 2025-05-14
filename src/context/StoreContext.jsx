@@ -45,6 +45,15 @@ const StoreContextProvider = (props) => {
   }
 };
 
+  const getUserIdFromToken = (token) => {
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload.userId;
+    } catch (error) {
+      console.error("Erro ao decodificar token:", error);
+      return null;
+    }
+  };
 
   const removeTotalFromCart = async (itemId, userId) => {
   // Remove o item do carrinho completamente
@@ -55,7 +64,7 @@ const StoreContextProvider = (props) => {
 
   // Remove o item do banco de dados
   if (token) {
-    await axios.post(url + "/api/cart/remove", { itemId, userId }, { headers: { token } });
+    await axios.post(url + "/api/cart/removeAll", { itemId, userId }, { headers: { token } });
   }
 };
 
@@ -111,6 +120,7 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
+    getUserIdFromToken,
   };
 
   return (

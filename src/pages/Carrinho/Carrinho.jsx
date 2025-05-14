@@ -5,11 +5,15 @@ import { useNavigate } from 'react-router-dom'
 
 const Carrinho = () => {
 
+  
+
   const navigate = useNavigate();
 
-  const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount, url} = useContext(StoreContext);
+  const{cartItems, food_list, removeTotalFromCart, getTotalCartAmount, url, getUserIdFromToken, token} = useContext(StoreContext);
 
   const isCartEmpty = food_list.every(item => cartItems[item._id] === 0 || !cartItems[item._id]);
+
+  const userId = getUserIdFromToken(token);
 
   return (
     <div className='carrinho'>
@@ -41,7 +45,7 @@ const Carrinho = () => {
                     <p className='preco'>R${item.price}</p>
                     <p>{cartItems[item._id]}</p>
                     <p>R${item.price * cartItems[item._id]}</p>
-                    <p onClick={() => removeTotalFromCart(item._id)} className='cross'>X</p>
+                    <p onClick={async () => await removeTotalFromCart(item._id, userId)} className='cross'>X</p>
                   </div>
                   <hr />
                 </div>

@@ -54,6 +54,39 @@ const removeFromCart = async (req, res) => {
     }
 };
 
+// Remover item completamente do carrinho
+const removeAllFromCart = async (req, res) => {
+    const { userId, itemId } = req.body;
+
+    if (!userId || !itemId) {
+        return res.status(400).json({ success: false, message: "Parâmetros ausentes." });
+    }
+
+    try {
+        const user = await userModel.findById(userId);
+        if (!user) {
+            return res.status(404).json({ success: false, message: "Usuário não encontrado." });
+        }
+
+        const cartData = { ...user.cartData };
+
+        if (!cartData[itemId]) {
+            return res.status(400).json({ success: false, message: "Item não está no carrinho." });
+        }
+
+        // Remove o item completamente
+        delete cartData[itemId];
+
+        await userModel.findByIdAndUpdate(userId, { cartData });
+
+        return res.status(200).json({ success: true, message: "Item removido completamente do carrinho." });
+    } catch (error) {
+        console.error("Erro ao remover item do carrinho:", error);
+        return res.status(500).json({ success: false, message: "Erro interno do servidor." });
+    }
+};
+
+
 
 //Listar itens do carrinho
 const getCart = async (req, res) =>{
@@ -67,4 +100,4 @@ const getCart = async (req, res) =>{
     }
 };
 
-export {addToCart, removeFromCart, getCart};
+export {addToCart, removeFromCart, getCart, removeAllFromCart};
