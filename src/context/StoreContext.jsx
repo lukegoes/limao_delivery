@@ -46,9 +46,18 @@ const StoreContextProvider = (props) => {
 };
 
 
-  const removeTotalFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] = 0) }));
-  };
+  const removeTotalFromCart = async (itemId, userId) => {
+  // Remove o item do carrinho completamente
+  setCartItems((prev) => {
+    const { [itemId]: _, ...rest } = prev;
+    return rest;
+  });
+
+  // Remove o item do banco de dados
+  if (token) {
+    await axios.post(url + "/api/cart/remove", { itemId, userId }, { headers: { token } });
+  }
+};
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
