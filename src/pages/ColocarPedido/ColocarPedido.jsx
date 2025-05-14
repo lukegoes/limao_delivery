@@ -1,30 +1,78 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./ColocarPedido.css";
 import { StoreContext } from "../../context/StoreContext";
+import axios from "axios";
 
 const ColocarPedido = () => {
 
-  const {getTotalCartAmount} = useContext(StoreContext);
+  const {getTotalCartAmount, token, food_list, cartItems, url} = useContext(StoreContext);
+
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    street: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    country: "",
+    phone: ""
+  });
+
+  const onChangeHandler = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData(data => ({ ...data, [name]: value }));
+  };
+
+  const placeOrder = async (event) => {
+    event.preventDefault();
+    let orderItems = [];
+    food_list.map((item)=>{
+      if (cartItems[item._id] > 0) {
+        let itemInfo = item;
+        itemInfo["quantity"] = cartItems[item._id];
+        orderItems.push(itemInfo);
+      }
+    })
+
+    console.log("Itens do pedido:", orderItems);
+    let orderData = {
+      address: data,
+      items: orderItems,
+      amount: getTotalCartAmount()+9.9,
+    }
+
+    let response = await axios.post(url+"/api/order/place", orderData, {headers:{token}});
+    if (response.data.success) {
+      const {session_url} = response.data;
+      console.log("Redirecionando para pagamento:", session_url);
+      window.location.replace(session_url);
+    }
+    else {
+      alert("Erro ao realizar pedido");
+    }
+  };
 
   return (
-    <form className="colocar-pedido">
+    <form onSubmit={placeOrder} className="colocar-pedido">
       <div className="colocar-pedido-esquerda">
         <p className="title">Dados para entrega</p>
         <div className="multi-fields">
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Sobrenome" />
+          <input required name="firstName" onChange={onChangeHandler} value={data.firstName} type="text" placeholder="Nome" />
+          <input required name="lastName" onChange={onChangeHandler} value={data.lastName} type="text" placeholder="Sobrenome" />
         </div>
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Rua" />
+        <input required name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder="Email" />
+        <input required name="street" onChange={onChangeHandler} value={data.street} type="text" placeholder="Rua" />
         <div className="multi-fields">
-          <input type="text" placeholder="Cidade" />
-          <input type="text" placeholder="Estado" />
+          <input required name="city" onChange={onChangeHandler} value={data.city} type="text" placeholder="Cidade" />
+          <input required name="state" onChange={onChangeHandler} value={data.state} type="text" placeholder="Estado" />
         </div>
         <div className="multi-fields">
-          <input type="text" placeholder="CEP" />
-          <input type="text" placeholder="País" />
+          <input required name="zipcode" onChange={onChangeHandler} value={data.zipcode} type="text" placeholder="CEP" />
+          <input required name="country" onChange={onChangeHandler} value={data.country} type="text" placeholder="País" />
         </div>
-        <input type="text" placeholder="Telefone" />
+        <input required name="phone" onChange={onChangeHandler} value={data.phone} type="text" placeholder="Telefone" />
       </div>
 
       <div className="colocar-pedido-direita">
@@ -46,7 +94,7 @@ const ColocarPedido = () => {
               <b>R${(getTotalCartAmount()===0?0:getTotalCartAmount() + 9.99).toFixed(2)}</b>
             </div>
           </div>
-          <button>FINALIZAR PAGAMENTO</button>
+          <button type="submit">FINALIZAR PAGAMENTO</button>
         </div>
       </div>
     </form>

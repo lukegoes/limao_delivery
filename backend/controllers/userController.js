@@ -30,6 +30,7 @@ const loginUser = async (req, res) => {
 }
 
 const createToken = (id) => {
+    // eslint-disable-next-line no-undef
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" });
 };
 

@@ -6,6 +6,7 @@ const authMiddleware = async (req, res, next)=>{
         return res.json({success: false, message: "Acesso não autorizado, faça login novamente"})
     }
     try {
+        // eslint-disable-next-line no-undef
         const token_decode = jwt.verify(token, process.env.JWT_SECRET);
         req.body.userId = token_decode.id;
         next();
