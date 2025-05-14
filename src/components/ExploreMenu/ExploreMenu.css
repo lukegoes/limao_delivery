@@ -23,6 +23,8 @@ columns: #808080;
     text-align: center;
     margin: 20px 0;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     padding: 10px;
 }
 
