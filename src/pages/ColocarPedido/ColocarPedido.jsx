@@ -86,12 +86,12 @@ const ColocarPedido = () => {
             <hr />
             <div className="cart-total-details">
               <p>Taxa de entrega</p>
-              <p>R${getTotalCartAmount()===0?0:9.99}</p>
+              <p>R${getTotalCartAmount()===0?0:9}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>R${(getTotalCartAmount()===0?0:getTotalCartAmount() + 9.99).toFixed(2)}</b>
+              <b>R${(getTotalCartAmount()===0?0:getTotalCartAmount() + 9).toFixed(2)}</b>
             </div>
           </div>
           <button type="submit">FINALIZAR PAGAMENTO</button>

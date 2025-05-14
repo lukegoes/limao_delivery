@@ -39,7 +39,7 @@ const placeOrder = async (req, res) => {
                 product_data: {
                     name: "Taxa de entrega",
                 },
-                unit_amount: 9.99*100
+                unit_amount: 9*100
             },
             quantity: 1
         })
