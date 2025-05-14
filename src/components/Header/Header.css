@@ -79,8 +79,8 @@
 @media (max-width: 480px){
     .header{
         height: 200px;
-        width: 445px;
-        margin: 10px auto;
+        width: 425px;
+        margin: 5px auto;
         border-radius: 10px;
         max-width: 100%;
     }
