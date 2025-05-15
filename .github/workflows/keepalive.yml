@@ -1,0 +1,14 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # A cada 5 minutos
+  workflow_dispatch:
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send ping to Render
+        run: |
+          curl -s https://limao-delivery.onrender.com > /dev/null
