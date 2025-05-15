@@ -38,7 +38,7 @@ const MyOrders = () => {
                   className={`produtos ${expandido[index] ? "expandido" : ""}`}
                 >
                   {order.items
-                    .map((item) => `${item.name} x ${item.quantity}`)
+                    .map((item) => `${item.name}`)
                     .join(", ")}
                 </p>
                 {order.items.length > 2 && (
@@ -56,8 +56,7 @@ const MyOrders = () => {
                 )}
               </div>
               <p className="preco">
-                <p className="preco-text">Total do Pedido</p>R$
-                {order.amount / 100}
+                R${order.amount / 100}
               </p>
               <p>
                 Items: <b>{order.items.length}</b>
@@ -66,7 +65,7 @@ const MyOrders = () => {
                 <span>&#x25cf; </span>
                 <b>{order.status}</b>
               </p>
-              <button>Rastrear Pedido</button>
+              <button>Acompanhar</button>
             </div>
           );
         })}
