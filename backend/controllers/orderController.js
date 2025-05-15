@@ -59,4 +59,33 @@ const placeOrder = async (req, res) => {
     }
 }
 
-export {placeOrder}	
+const verifyOrder = async (req, res) => {
+    const {orderId, success} = req.body;
+    try {
+        if (success==="true") {
+            await orderModel.findByIdAndUpdate(orderId, {payment: true});
+            res.json({success: true, message: "Pedido pago com sucesso!"});
+        }
+        else {
+            await orderModel.findByIdAndUpdate(orderId);
+            res.json({success: false, message: "Pedido aguardando pagamento."});
+        }
+    } catch (error) {
+        console.log(error);
+        res.json ({success: false, message: "Erro ao verificar pedido"})
+    }
+}
+
+const userOrders = async (req, res) => {
+    try {
+        console.log("UserId recebido:", req.userId);
+        const orders = await orderModel.find({ userId: req.body.userId });
+        console.log("Pedidos encontrados:", orders);
+        res.json({ success: true, data: orders });
+    } catch (error) {
+        console.error("Erro ao listar pedidos:", error);
+        res.status(500).json({ success: false, message: "Erro ao listar pedidos" });
+    }
+};
+
+export {placeOrder, verifyOrder, userOrders}	

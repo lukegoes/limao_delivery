@@ -30,7 +30,7 @@ app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
-
+app.use("/api/verify", orderRouter);
 
 app.get("/", (req, res)=>{
     res.send("API Funcionando")
