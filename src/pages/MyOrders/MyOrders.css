@@ -179,4 +179,16 @@
   .produtos {
   max-height: 45px;
 }
+
+.skeleton-img {
+  width: 40px;
+  height: 55px;
+}
+
+.skeleton-text-line {
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin: 5px 0;
+}
 }
