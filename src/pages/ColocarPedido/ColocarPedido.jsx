@@ -36,11 +36,11 @@ const ColocarPedido = () => {
       }
     })
 
-    console.log("Itens do pedido:", orderItems);
+    let total = parseFloat((getTotalCartAmount() + 9).toFixed(2));
     let orderData = {
       address: data,
       items: orderItems,
-      amount: Math.round((getTotalCartAmount() + 9) * 100)
+      amount: Math.round(total * 100), 
     }
 
     let response = await axios.post(url+"/api/order/place", orderData, {headers:{token}});
