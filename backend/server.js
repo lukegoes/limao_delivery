@@ -17,7 +17,9 @@ const port = process.env.PORT || 4000;
 
 
 //Middlewares
-app.use(cors())
+app.use(cors({
+  origin: 'https://limaodelivery.vercel.app',
+}));
 app.use(express.json())
 console.log("Middleware express.json ativado");
 
