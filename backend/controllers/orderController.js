@@ -10,6 +10,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //Colocando pedido do usuário p/ frontend
 const placeOrder = async (req, res) => {
 
+    // eslint-disable-next-line no-undef
     const frontend_url = process.env.VITE_API_URL;
 
     try {

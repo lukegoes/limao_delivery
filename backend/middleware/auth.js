@@ -9,7 +9,6 @@ const authMiddleware = async (req, res, next)=>{
     }
     try {
         // eslint-disable-next-line no-undef
-        console.log("Token recebido:", token);
         const token_decode = jwt.verify(token, process.env.JWT_SECRET);
         req.body = req.body || {};
         req.body.userId = token_decode.id;

@@ -63,6 +63,25 @@
     background-color: #075b0d;
 }
 
+.produtos {
+  max-height: 40px;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.produtos.expandido {
+  max-height: none;
+}
+
+.ver-mais {
+  font-size: 12px;
+  color: #078b17;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline-block;
+}
+
 @media screen and (max-width: 768px) {
     
     .my-orders-order{
@@ -90,7 +109,7 @@
 @media screen and (max-width: 550px) {
     .my-orders{
         padding: 0 20px;
-        min-height: 66vh;
+        
     }
     
 }
