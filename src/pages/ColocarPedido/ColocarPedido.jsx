@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./ColocarPedido.css";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const ColocarPedido = () => {
 
@@ -53,6 +54,18 @@ const ColocarPedido = () => {
       alert("Erro ao realizar pedido");
     }
   };
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if (!token) {
+      navigate("/carrinho");
+    }
+    else if (getTotalCartAmount() === 0)
+      {
+      navigate("/carrinho");
+    }
+  },[token])
 
   return (
     <form onSubmit={placeOrder} className="colocar-pedido">
