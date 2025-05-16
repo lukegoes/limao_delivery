@@ -17,11 +17,20 @@ const port = process.env.PORT || 4000;
 
 
 //Middlewares
+const allowedOrigins = [
+  'http://localhost:5173',  // Para desenvolvimento
+  'https://limaodelivery.vercel.app' // Para produção
+];
+
 app.use(cors({
-  origin: 'https://limaodelivery.vercel.app',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
-app.use(express.json())
-console.log("Middleware express.json ativado");
 
 //Conexão ao DB
 connectDB();
