@@ -4,7 +4,7 @@
     max-width: 1322px;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
-    background-size: cover;
+    background-size: auto;
     position: relative;
     border-radius: 10px;
 }
@@ -30,6 +30,9 @@
 .header-contents p{
     color: #505050;
     font-size: 1vw;
+    white-space: normal;     
+    word-break: break-word;
+    max-width: 80%;
 }
 
 .header-contents button{
@@ -54,6 +57,7 @@
         height: 250px;
         padding: 0 20px;
         max-width: 100%;
+        background-size:cover;
     }
 
     .header-contents {
@@ -85,6 +89,7 @@
     border-radius: 10;
     max-width: 95%;
     box-sizing: border-box;
+    background-size:cover;
 }
     
 
