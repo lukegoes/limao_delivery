@@ -3,9 +3,8 @@
     width: 100%;
     max-width: 1322px;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: cover;
     position: relative;
+    border-radius: 10px;
 }
 
 .header-contents{
@@ -81,7 +80,7 @@
     height: 200px;
     width: 100%;
     margin: 10px auto;
-    border-radius: 0;
+    border-radius: 10;
     max-width: 95%;
     box-sizing: border-box;
 }
