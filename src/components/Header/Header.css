@@ -3,6 +3,8 @@
     width: 100%;
     max-width: 1322px;
     margin: 30px auto;
+    background: url('/header_img.png') no-repeat;
+    background-size: cover;
     position: relative;
     border-radius: 10px;
 }
