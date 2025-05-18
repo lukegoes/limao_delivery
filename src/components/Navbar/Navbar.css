@@ -185,6 +185,7 @@
 
     .navbar-direita{
         gap: 18px;
+        padding-bottom: 5px;
     }
     
     .navbar-direita img{
