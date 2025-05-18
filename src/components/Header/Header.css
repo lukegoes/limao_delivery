@@ -74,7 +74,7 @@
         font-size: 12px;
     }
 
-    .header-contents button {
+    .header-contents .explore-button {
         padding: 10px 20px;
         font-size: 14px;
     }
@@ -101,7 +101,7 @@
         font-size: 20px;
     }
 
-    .header-contents button{
+    .header-contents .explore-button{
         font-size: 10px;
     }
 }
