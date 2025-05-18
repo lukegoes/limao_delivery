@@ -1,12 +1,11 @@
 .header{
     height: 400px;
     width: 100%;
-    max-width: 1322px;
+    max-width: 1200px;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
     background-size: cover;
     position: relative;
-    border-radius: 10px;
 }
 
 .header-contents{
@@ -79,13 +78,12 @@
 
 @media (max-width: 480px){
     .header{
-    height: 200px;
-    width: 100%;
-    margin: 10px auto;
-    border-radius: 10;
-    max-width: 95%;
-    box-sizing: border-box;
-}
+        height: 200px;
+        width: 425px;
+        margin: 10px auto;
+        border-radius: 0;
+        max-width: 100%;
+    }
     
 
     .header-contents p{
