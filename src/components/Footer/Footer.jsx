@@ -3,7 +3,8 @@ import "./Footer.css";
 import { assets } from "../../assets/frontend_assets/assets";
 
 const Footer = () => {
-  return <div className="footer" id="footer">
+ 
+ return <div className="footer" id="footer">
     <div className="footer-content">
     
     <div className="footer-content-esquerda">
@@ -29,13 +30,13 @@ const Footer = () => {
     <div className="footer-content-direita">
     <h2>Entre em Contato</h2>
     <ul>
-        <li>(21) 91234-5678</li>
+        <li>(21) 91234</li>
         <li>contato@limao.com.br</li>
     </ul>
     </div>
     
     </div>
-    <hr />
+
     <p className="footer-copyright">Copyright 2025 © Limão.com</p>
   </div>;
 };

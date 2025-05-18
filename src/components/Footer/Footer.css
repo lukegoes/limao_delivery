@@ -1,6 +1,7 @@
 .footer{
+    border-top: 2px solid  rgba(110, 173, 118, 0.525);
     color: #000000;
-    background-color: #d1e6cb;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
