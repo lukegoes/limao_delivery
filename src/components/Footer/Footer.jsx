@@ -29,7 +29,7 @@ const Footer = () => {
     <div className="footer-content-direita">
     <h2>Entre em Contato</h2>
     <ul>
-        <li>(21) 99999-9999</li>
+        <li>(21) 91234-5678</li>
         <li>contato@limao.com.br</li>
     </ul>
     </div>

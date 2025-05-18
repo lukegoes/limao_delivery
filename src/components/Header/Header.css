@@ -35,7 +35,7 @@
     max-width: 80%;
 }
 
-.header-contents button{
+.header-contents .explore-button{
     border: none;
     color: #747474;
     font-weight: 600;
@@ -47,7 +47,7 @@
     transition: 0.5s;
 }
 
-.header-contents button:hover{
+.header-contents .explore-button:hover{
     background-color: #11BB25;
     color: white;
 }
