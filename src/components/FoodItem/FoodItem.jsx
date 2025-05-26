@@ -7,20 +7,24 @@ const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
   const [loaded, setLoaded] = useState(false);
 
+  // Verifica se cartItems está carregado corretamente
+  if (!cartItems) return null;
+
   return (
     <div className="food-item">
       <div className="food-item-img-container">
         <div className="food-item-img-wrapper">
           {!loaded && <div className="img-skeleton" />}
           <img
-            src={url+"/images/"+image}
+            src={url + "/images/" + image}
             alt=""
             className="food-item-img"
             style={{ display: loaded ? "block" : "none" }}
             onLoad={() => setLoaded(true)}
           />
         </div>
-        {!cartItems[id] ? (
+
+        {!cartItems?.[id] ? (
           <img
             className="add"
             onClick={() => addToCart(id)}
@@ -43,6 +47,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           </div>
         )}
       </div>
+
       <div className="food-item-info">
         <div className="food-item-name-rating">
           <p>{name}</p>
