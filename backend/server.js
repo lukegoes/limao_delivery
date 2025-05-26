@@ -32,6 +32,8 @@ app.use(cors({
   }
 }));
 
+app.use(express.json());
+
 //Conexão ao DB
 connectDB();
 
