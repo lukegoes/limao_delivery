@@ -98,15 +98,32 @@ const StoreContextProvider = (props) => {
   }
 
   useEffect(() => {
-    async function loadData() {
-      await fetchFoodList();
-      if (localStorage.getItem("token")) {
-        setToken(localStorage.getItem("token"));
-        await loadCartData(localStorage.getItem("token"));
+  async function loadData() {
+    await fetchFoodList();
+
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      try {
+        setToken(storedToken);
+        await loadCartData(storedToken);
+      } catch (error) {
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.error === "jwt expired"
+        ) {
+          console.warn("Token expirado. Redirecionando para login.");
+          localStorage.removeItem("token");
+          setToken(""); 
+        } else {
+          console.error("Erro ao carregar carrinho:", error);
+        }
       }
     }
-    loadData();
-  }, []);
+  }
+  loadData();
+}, []);
+
 
   const ContextValue = {
     food_list,
